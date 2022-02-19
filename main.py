@@ -1,3 +1,7 @@
+# User-Eingaben außerhalb der Klasse
+# Kontrolle innerhalb der Klasse
+# TODO: BugFix Usereingabe Wortlänge
+# TODO: BugFix Datei aufräumen (Zahlen und Sonderzeichen raus, Großbuchstaben in Kleinbuchstaben, etc)
 from TheGame import TheGame
 
 # Tests
