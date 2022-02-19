@@ -1,4 +1,5 @@
 from TheWordGenerator import TheWordGenerator
+import config
 
 
 class TheWord:
@@ -18,10 +19,10 @@ class TheWord:
 
         for i in range(len(word)):
             if word[i] == self.word_to_find[i]:
-                compare_string += "o"
+                compare_string += config.correct
             elif word[i] in self.word_to_find:
-                compare_string += "ø"
+                compare_string += config.wrong_place
             else:
-                compare_string += "x"
+                compare_string += config.wrong
 
         return compare_string

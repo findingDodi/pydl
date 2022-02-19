@@ -1,4 +1,5 @@
 from TheWord import TheWord
+import config
 
 
 class TheGame:
@@ -10,9 +11,9 @@ class TheGame:
         your_word = TheWord()
 
         print("The Word you are searching for has", your_word.get_word_len(), "letters!")
-        print("o = Letter is on the correct position")
-        print("ø = Letter is on the wrong position")
-        print("x = Letter is not in the word")
+        print(config.correct, "= Letter is on the correct position")
+        print(config.wrong_place, "= Letter is on the wrong place")
+        print(config.wrong, "= Letter is not in the word")
 
         for i in range(self.tries):
             print("You have", (self.tries - i), "left")
