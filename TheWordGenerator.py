@@ -18,7 +18,7 @@ class TheWordGenerator:
         file_handle = open(filename, "r")
         file_content = file_handle.read()
         file_handle.close()
-        self.sanitize_string(file_content)
+        file_content = self.sanitize_string(file_content)
         words_from_file = file_content.split()
 
         self.words = words_from_file
