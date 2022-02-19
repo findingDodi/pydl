@@ -1,7 +1,8 @@
 # User-Eingaben außerhalb der Klasse
 # Kontrolle innerhalb der Klasse
 # TODO: BugFix Usereingabe Wortlänge
-# TODO: BugFix Datei aufräumen (Zahlen und Sonderzeichen raus, Großbuchstaben in Kleinbuchstaben, etc)
+# TODO: adding level with min/max word length
+# TODO: Make output character configurable ⬜🟩🟨
 from TheGame import TheGame
 
 # Tests
