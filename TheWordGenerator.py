@@ -1,3 +1,4 @@
+from TheLevel import TheLevel
 import random
 import re
 
@@ -13,6 +14,23 @@ class TheWordGenerator:
         random_word = self.words[random_number]
 
         return random_word
+
+    def get_random_leveled_word(self):
+        your_level = TheLevel()
+        leveled_word_list = self.get_leveled_word_list(your_level.get_selected_level_limits())
+        random_number = random.randrange(len(leveled_word_list))
+        random_word = leveled_word_list[random_number]
+
+        return random_word
+
+
+    def get_leveled_word_list(self, level_limits):
+        leveled_word_list = []
+        for word in self.words:
+            if len(word) >= level_limits[0] and len(word) <= level_limits[1]:
+                leveled_word_list.append(word)
+
+        return leveled_word_list
 
     def read_words_from_file(self, filename="gpl.txt"):
         file_handle = open(filename, "r")

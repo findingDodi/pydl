@@ -1,6 +1,5 @@
 # User-Eingaben außerhalb der Klasse
 # Kontrolle innerhalb der Klasse
-# TODO: adding level with min/max word length
 from TheGame import TheGame
 
 # Tests

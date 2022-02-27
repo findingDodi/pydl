@@ -6,7 +6,7 @@ class TheWord:
 
     def __init__(self):
         my_word_generator = TheWordGenerator()
-        self.word_to_find = my_word_generator.get_random_word()
+        self.word_to_find = my_word_generator.get_random_leveled_word()
 
     def get_word_len(self):
         return len(self.word_to_find)
