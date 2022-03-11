@@ -7,11 +7,12 @@ class TheLevel:
         self.level_hard = (8, 10)
         self.level_extra_hard = (11, 999)
         self.level_random = (2, 999)
+        self.level_wordle = (5, 5)
 
     def get_level_from_user(self):
         print("Choose your level")
         print("1 = easy (2-4 letters), 2 = medium (5-7 letters), 3 = hard (8-10 letters),")
-        print("4 = extra hard (11+ letters), 5 = random (2+ letters)")
+        print("4 = extra hard (11+ letters), 5 = wordle (5 letters), 6 = random (2+ letters)")
         user_level = int(input("Enter Level: "))
 
         return user_level
@@ -26,4 +27,7 @@ class TheLevel:
         if self.level == 4:
             return self.level_extra_hard
         if self.level == 5:
+            return self.level_wordle
+        if self.level == 6:
             return self.level_random
+
