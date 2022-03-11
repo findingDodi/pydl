@@ -8,6 +8,7 @@ class TheGame:
         self.tries = 6
 
     def running_game(self):
+        print("Welcome to pydl!")
         your_word = TheWord()
 
         print("The Word you are searching for has", your_word.get_word_len(), "letters!")
