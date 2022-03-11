@@ -11,8 +11,12 @@ class TheLevel:
 
     def get_level_from_user(self):
         print("Choose your level:")
-        print("1 = easy (2-4 letters), 2 = medium (5-7 letters), 3 = hard (8-10 letters),")
-        print("4 = extra hard (11+ letters), 5 = wordle (5 letters), 6 = random (2+ letters)")
+        print("1 = easy (2-4 letters)")
+        print("2 = medium (5-7 letters)")
+        print("3 = hard (8-10 letters)")
+        print("4 = extra hard (11+ letters)")
+        print("5 = wordle (5 letters)")
+        print("6 = random (2+ letters)")
         user_level = int(input("Enter Level: "))
 
         return user_level
