@@ -17,8 +17,10 @@ class TheWordGenerator:
         return random_word
 
     def get_random_leveled_word(self):
-        your_level = TheLevel()
+        word_lengths_from_list = self.get_word_lengths(self.words)
+        your_level = TheLevel(word_lengths_from_list)
         leveled_word_list = self.get_leveled_word_list(your_level.get_selected_level_limits())
+        print("******",your_level.get_selected_level_limits())
         random_number = random.randrange(len(leveled_word_list))
         random_word = leveled_word_list[random_number]
 
@@ -43,6 +45,14 @@ class TheWordGenerator:
         user_word_list_index = int(input("Which wordlist do you want to use? (Enter number): "))
 
         return word_lists[(user_word_list_index - 1)]
+
+    def get_word_lengths(self, words_array):
+        word_set = set()
+        for word in words_array:
+            word_set.add(len(word))
+
+        return word_set
+
 
     def read_words_from_file(self, filename="words.csv"):
         file_handle = open("wordlists/" + filename, "r")
