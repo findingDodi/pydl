@@ -7,6 +7,19 @@ class TheGame:
     def __init__(self):
         self.tries = 6
 
+    def print_guess_graph(self, guesses, word):
+        print("*" * 10)
+        print("Your guess graph for the word '", word, "'")
+        print("\n".join(guesses))
+
+    def get_stretched_word(self, word):
+        stretched_word = ""
+        # TODO: pythify
+        for i in range(len(word)):
+            stretched_word += word[i] + " "
+
+        return stretched_word
+
     def running_game(self):
         print("Welcome to pydl!")
         your_word = TheWord()
@@ -20,7 +33,7 @@ class TheGame:
             print("You have", (self.tries - i), "left")
             user_word = input("Enter Word: ")
             if len(user_word) == your_word.get_word_len():
-                print(user_word)
+                print(self.get_stretched_word(user_word))
                 print(your_word.word_check(user_word))
 
                 if not your_word.is_word_correct(user_word):
@@ -28,11 +41,14 @@ class TheGame:
                         print("Try Again!")
                     else:
                         print("You did not find the word '", your_word.word_to_find, "'")
+                        self.print_guess_graph(your_word.word_guesses, your_word.word_to_find)
                 else:
                     if i == 0:
                         print("Congrats! You won on the first try!")
+                        self.print_guess_graph(your_word.word_guesses, your_word.word_to_find)
                     else:
                         print("Congrats! You won after", i + 1, "tries!")
+                        self.print_guess_graph(your_word.word_guesses, your_word.word_to_find)
 
                     break
 

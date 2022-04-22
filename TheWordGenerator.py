@@ -20,7 +20,7 @@ class TheWordGenerator:
         word_lengths_from_list = self.get_word_lengths(self.words)
         your_level = TheLevel(word_lengths_from_list)
         leveled_word_list = self.get_leveled_word_list(your_level.get_selected_level_limits())
-        print("******",your_level.get_selected_level_limits())
+        #print("******", your_level.get_selected_level_limits())
         random_number = random.randrange(len(leveled_word_list))
         random_word = leveled_word_list[random_number]
 

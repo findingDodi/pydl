@@ -7,6 +7,7 @@ class TheWord:
     def __init__(self):
         my_word_generator = TheWordGenerator()
         self.word_to_find = my_word_generator.get_random_leveled_word()
+        self.word_guesses = []
 
     def get_word_len(self):
         return len(self.word_to_find)
@@ -24,5 +25,7 @@ class TheWord:
                 compare_string += config.wrong_place
             else:
                 compare_string += config.wrong
+
+        self.word_guesses.append(compare_string)
 
         return compare_string
